@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: mexora_postgres
+    environment:
+      POSTGRES_DB: mexora_etl
+      POSTGRES_USER: etl_user
+      POSTGRES_PASSWORD: etl_password_secure
+      POSTGRES_INITDB_ARGS: "--encoding=UTF8"
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U etl_user -d mexora_etl"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - mexora_network
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+    driver: local
+
+networks:
+  mexora_network:
+    driver: bridge

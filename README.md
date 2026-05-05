@@ -2,20 +2,20 @@
 
 **Pipeline ETL complet et Data Warehouse** construit avec Python, PostgreSQL et visualisations interactives pour l'analyse de données e-commerce.
 
-## 📋 Vue d'ensemble du projet
+## Vue d'ensemble du projet
 
 Mexora ETL est un **miniprojet de modélisation dimensionnelle** qui implémente un pipeline ETL complet pour transformer des données brutes en un data warehouse optimisé pour l'analyse. Le projet couvre la **modélisation en étoile**, l'**extraction/transformation/chargement** avec Python, la **persistance** PostgreSQL, et des **dashboards** analytiques.
 
 ### Objectifs pédagogiques
-- ✅ Maîtriser la modélisation dimensionnelle (schéma en étoile)
-- ✅ Construire un pipeline ETL robuste et maintenable
-- ✅ Gérer les changements dimensionnels (SCD)
-- ✅ Optimiser les performances avec PostgreSQL
-- ✅ Créer des visualisations métier pertinentes
+- Maîtriser la modélisation dimensionnelle (schéma en étoile)
+- Construire un pipeline ETL robuste et maintenable
+- Gérer les changements dimensionnels (SCD)
+- Optimiser les performances avec PostgreSQL
+- Créer des visualisations métier pertinentes
 
 ---
 
-## 🏗️ Architecture et Structure
+## Architecture et Structure
 
 ### Dimensions du Data Warehouse
 
@@ -53,7 +53,7 @@ mexora_etl/
 
 ---
 
-## 📊 Critères d'évaluation
+## Critères d'évaluation
 
 ### Étape 1 — Modélisation (25 points)
 | Critère | Points |
@@ -85,11 +85,11 @@ mexora_etl/
 | Qualité de la visualisation | 5 |
 | Insights métier identifiés | 5 |
 
-**💯 Total : 100 points**
+**Total : 100 points**
 
 ---
 
-## 🛠️ Outils requis
+## Outils requis
 
 | Outil | Usage | Installation |
 |-------|-------|--------------|
@@ -104,7 +104,7 @@ mexora_etl/
 
 ---
 
-## 🚀 Installation et configuration
+## Installation et configuration
 
 ### 1. **Prérequis système**
 ```bash
@@ -150,7 +150,7 @@ python3 scripts/init_database.py
 
 ---
 
-## 📝 Utilisation
+## Utilisation
 
 ### Exécuter le pipeline complet
 ```bash
@@ -182,7 +182,7 @@ tail -f logs/etl.log
 
 ---
 
-## 📈 Dashboard et requêtes analytiques
+## Dashboard et requêtes analytiques
 
 ### 5 questions métier à répondre
 
@@ -206,7 +206,7 @@ CREATE MATERIALIZED VIEW v_customer_value_segmentation AS ...
 
 ---
 
-## 🔄 Gestion des changements dimensionnels (SCD)
+## Gestion des changements dimensionnels (SCD)
 
 Le projet implémente les stratégies de gestion des changements lents :
 
@@ -225,7 +225,7 @@ Le projet implémente les stratégies de gestion des changements lents :
 
 ---
 
-## 📋 Qualité et bonnes pratiques
+## Qualité et bonnes pratiques
 
 ### Logging
 ```python
@@ -239,20 +239,20 @@ logger.error("Erreur critique", exc_info=True)
 ```
 
 ### Gestion des erreurs
-- ✅ Try-catch sur opérations BD
-- ✅ Validation des données en entrée
-- ✅ Rollback en cas d'erreur
-- ✅ Documentation des cas d'exception
+- Try-catch sur opérations BD
+- Validation des données en entrée
+- Rollback en cas d'erreur
+- Documentation des cas d'exception
 
 ### Structure du code
-- 📁 Séparation des couches (extract → transform → load)
-- 📄 Fonctions réutilisables
-- 💬 Docstrings pour chaque module
-- 🧪 Tests unitaires pour les transformations critiques
+- Séparation des couches (extract → transform → load)
+- Fonctions réutilisables
+- Docstrings pour chaque module
+- Tests unitaires pour les transformations critiques
 
 ---
 
-## 📚 Documentation complémentaire
+## Documentation complémentaire
 
 - [Modélisation dimensionnelle : guide détaillé](./docs/modeling_guide.md)
 - [Règles de transformation : dictionnaire des données](./docs/transformation_rules.md)
@@ -261,7 +261,7 @@ logger.error("Erreur critique", exc_info=True)
 
 ---
 
-## 🤝 Contribution
+## Contribution
 
 1. Créer une branche `feature/ma-feature`
 2. Committer avec messages clairs
@@ -270,7 +270,7 @@ logger.error("Erreur critique", exc_info=True)
 
 ---
 
-## 📞 Support et ressources
+## Support et ressources
 
 - **Logs** : `logs/etl.log` pour debugging
 - **Configuration** : [config/settings.py](./config/settings.py)
@@ -278,7 +278,7 @@ logger.error("Erreur critique", exc_info=True)
 
 ---
 
-## 📄 Licence
+## Licence
 
 Projet éducatif — Libre d'utilisation.
 
